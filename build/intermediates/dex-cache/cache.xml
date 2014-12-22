@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/wangchenlong/Installations/android-sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
+        <dex dex="/Users/wangchenlong/Exercises/Test-STConvert/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-178a5668eba0f831d7d75522b2a09685372fb643.jar" />
+    </item>
+    <item
+        jar="/Users/wangchenlong/Exercises/Test-STConvert/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
+        <dex dex="/Users/wangchenlong/Exercises/Test-STConvert/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-19d15f8ac06d8074bb98a9902cb0a0b5e4d5b030.jar" />
+    </item>
+    <item
+        jar="/Users/wangchenlong/Exercises/Test-STConvert/app/libs/ZHConverter.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="416606cdd3d7693e798287ce9adccba3f2552772">
+        <dex dex="/Users/wangchenlong/Exercises/Test-STConvert/app/build/intermediates/pre-dexed/debug/ZHConverter-289cd3895fbc0b74e4e696d2c45fa011036cc177.jar" />
+    </item>
+    <item
+        jar="/Users/wangchenlong/Exercises/Test-STConvert/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="f21927d22fe31889ecce94dd697a2e75b137e0ef">
+        <dex dex="/Users/wangchenlong/Exercises/Test-STConvert/app/build/intermediates/pre-dexed/debug/classes-8a476f7479762f4b79acc326df2a00f58ad46e8b.jar" />
+    </item>
+    <item
+        jar="/Users/wangchenlong/Exercises/Test-STConvert/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0">
+        <dex dex="/Users/wangchenlong/Exercises/Test-STConvert/app/build/intermediates/pre-dexed/debug/classes-1e02973911601a411b4012a82b7aa1a75585c34e.jar" />
+    </item>
+
+</items>
