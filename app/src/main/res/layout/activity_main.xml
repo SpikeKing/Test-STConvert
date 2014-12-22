@@ -17,24 +17,48 @@
         android:layout_centerHorizontal="true"/>
 
     <EditText
-        android:id="@+id/edit_text"
+        android:id="@+id/smp_edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/convert_button"
+        android:layout_toStartOf="@+id/convert_trd_button"
+        android:layout_toLeftOf="@+id/convert_trd_button"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"/>
 
     <Button
-        android:id="@+id/convert_button"
+        android:id="@+id/convert_trd_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/convert_button"
-        android:layout_alignTop="@+id/edit_text"
+        android:text="@string/convert_trd_button"
+        android:layout_alignTop="@+id/smp_edit_text"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignBottom="@+id/edit_text"/>
+        android:layout_alignBottom="@+id/smp_edit_text"/>
+
+    <EditText
+        android:id="@+id/trd_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:layout_above="@id/smp_edit_text"
+        android:layout_toStartOf="@+id/convert_smp_button"
+        android:layout_toLeftOf="@+id/convert_smp_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+
+    <Button
+        android:id="@+id/convert_smp_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/convert_smp_button"
+        android:layout_above="@id/convert_trd_button"
+        android:layout_alignTop="@+id/trd_edit_text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/trd_edit_text"/>
 
 </RelativeLayout>

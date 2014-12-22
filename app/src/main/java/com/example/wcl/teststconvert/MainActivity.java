@@ -1,7 +1,7 @@
 package com.example.wcl.teststconvert;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,39 +11,70 @@ import android.widget.TextView;
 
 import com.spreada.utils.chinese.ZHConverter;
 
-
+/**
+ * 简体-繁体转换示例:
+ * 使用{@link com.spreada.utils.chinese.ZHConverter}库；
+ * 两种使用方式：参数，转换器(ZHConverter)；
+ * 实现繁体-简体的双向转换。
+ * <p/>
+ * created by C.L.Wang
+ */
+@SuppressWarnings("all")
 public class MainActivity extends ActionBarActivity {
 
-    private TextView mTextView;
-    private EditText mEditText;
-    private Button mButton;
+    private TextView mTextView; // 显示框
+
+    private EditText mSmpEditText; // 简体字输入框
+    private Button mConvertToTrdButton; // 转换繁体按钮
+
+    private EditText mTrdEditText; // 繁体字输入框
+    private Button mConvertToSmpButton; // 转换简体按钮
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mTextView = (TextView)findViewById(R.id.show_text);
-        mEditText = (EditText)findViewById(R.id.edit_text);
-        mButton = (Button)findViewById(R.id.convert_button);
+        mTextView = (TextView) findViewById(R.id.show_text);
 
-//        ZHConverter converter = ZHConverter.getInstance(ZHConverter.SIMPLIFIED);
-//        String simplifiedStr = converter.convert("有背光的機械式鍵盤");
-//
-//        ZHConverter.convert("有背光的机械式键盘", ZHConverter.TRADITIONAL);
 
-        mButton.setOnClickListener(new View.OnClickListener() {
+        mSmpEditText = (EditText) findViewById(R.id.smp_edit_text);
+        mConvertToTrdButton = (Button) findViewById(R.id.convert_trd_button);
+        mSmpEditText.setText("春雨医生三周年纪念");
+
+        // 简体转换为繁体
+        mConvertToTrdButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String simp = mEditText.getText().toString();
-                String trad = ZHConverter.convert(simp, ZHConverter.TRADITIONAL);
-                mTextView.setText(trad);
+                String smp = mSmpEditText.getText().toString();
+
+                // 通过参数转换
+                String trd = ZHConverter.convert(smp, ZHConverter.TRADITIONAL);
+
+                mTextView.setText(trd);
             }
         });
 
+        mTrdEditText = (EditText) findViewById(R.id.trd_edit_text);
+        mConvertToSmpButton = (Button) findViewById(R.id.convert_smp_button);
+        mTrdEditText.setText("春雨醫生三周年紀念");
+
+        // 繁体转换为简体
+        mConvertToSmpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String trd = mTrdEditText.getText().toString();
+
+                // 通过转换器转换
+                ZHConverter converter = ZHConverter.getInstance(ZHConverter.SIMPLIFIED);
+                String smp = converter.convert(trd);
+
+                mTextView.setText(smp);
+            }
+        });
 
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
